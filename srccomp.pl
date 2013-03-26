@@ -90,6 +90,7 @@ sub findsubseq_tree($$$$)
 		{
 			my $sub = substr $s, $start, $len;
 			my $i = find_substring $tree, $sub;
+			$i -= 1;
 			last if $i >= $tlen;
 			last if $i < 0;
 			my $worth = worth $sub;
